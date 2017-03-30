@@ -67,7 +67,6 @@ with open(file, 'rb') as name_csv:
                     uri_list = []
                     print "-> {0} records found\n".format(len(uri_result_set))
                     for uri in uri_result_set:
-                        print uri
                         uri_list += [str(uri)]
                         # get_record_info(uri)
                     matches += [[name, uri_list]]
