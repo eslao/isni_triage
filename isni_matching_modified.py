@@ -55,7 +55,7 @@ with open(file, 'rb') as name_csv:
             if name not in name_list and name not in exclude_names:
                 name_list += [name]
                 ### For testing ###
-                if len(name_list) > 5:
+                if len(name_list) > 15:
                     break
                 print "Querying ISNI for '{0}'...".format(name)
                 isni_response = query_isni(name)
