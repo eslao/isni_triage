@@ -39,7 +39,7 @@ def write_csv(filename, content):
     print filename, 'has been created'
 
 # Create lists
-matches = [['Name', 'ISNI Record URI']]
+matches = [['Name', 'Number of Matching Records', 'ISNI Record URIs']]
 non_matches = [['Name', 'Original Titles', 'Year of Release', 'Item number']]
 
 # Get unique names
@@ -57,19 +57,24 @@ with open(file, 'rb') as name_csv:
                 ### For testing ###
                 if len(name_list) > 15:
                     break
-                print "Querying ISNI for '{0}'...".format(name)
+                print "\nQuerying ISNI for '{0}'...".format(name)
                 isni_response = query_isni(name)
                 uri_result_set = parse_isni(isni_response)
                 if len(uri_result_set) == 0:
-                    print '-> Zero records found\n'
+                    print '-> Zero records found'
                     non_matches += [[name, row[1][27], row[1][22], row[1][147]]]
                 elif len(uri_result_set) > 0:
                     uri_list = []
-                    print "-> {0} records found\n".format(len(uri_result_set))
-                    for uri in uri_result_set:
+                    print "-> {0} records found".format(len(uri_result_set))
+                    for idx, uri in enumerate(uri_result_set):
+                        # Cap the number of URIs output at 5
+                        if idx > 4:
+                            print "-> Too many records! Outputting the first 5 URIs; search for the rest manually.\n"
+                            uri_list += ["..."]
+                            break
                         uri_list += [str(uri)]
                         # get_record_info(uri)
-                    matches += [[name, uri_list]]
+                    matches += [[name, len(uri_result_set), uri_list]]
 
 # Write non-matches to csv
 write_csv('non_matches_sample.csv', non_matches)
