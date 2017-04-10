@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 
 import requests
-import csv
-import time
+import csv, time, sys, re
 import codecs
 from bs4 import BeautifulSoup
 import urllib
-import re
 
 def parse_isni(response):
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -46,38 +44,43 @@ non_matches = [['Name', 'Original Titles', 'Year of Release', 'Item number']]
 exclude_names = ["Director", "[uncredited]", "[unknown]"]
 name_list = []
 
+# Input filename
+if len(sys.argv) > 1:
+    input_file = sys.argv[1]
+else:
+    print "Please provide a CSV file.\n"
+
 # Read the file
-file = 'sample.csv'
-with open(file, 'rb') as name_csv:
-        reader = csv.reader(name_csv)
-        for row in enumerate(reader):
-            name = row[1][3].strip()
-            if name not in name_list and name not in exclude_names:
-                name_list += [name]
-                ### For testing ###
-                if len(name_list) > 15:
-                    break
-                print "\nQuerying ISNI for '{0}'...".format(name)
-                isni_response = query_isni(name)
-                uri_result_set = parse_isni(isni_response)
-                if len(uri_result_set) == 0:
-                    print '-> Zero records found'
-                    non_matches += [[name, row[1][27], row[1][22], row[1][147]]]
-                elif len(uri_result_set) > 0:
-                    uri_list = []
-                    print "-> {0} records found".format(len(uri_result_set))
-                    for idx, uri in enumerate(uri_result_set):
-                        # Cap the number of URIs output at 5
-                        if idx > 4:
-                            print "-> Too many records! Outputting the first 5 URIs; search for the rest manually.\n"
-                            uri_list += ["..."]
-                            break
-                        uri_list += [str(uri)]
-                        # get_record_info(uri)
-                    matches += [[name, len(uri_result_set), uri_list]]
+with open(input_file, 'rb') as name_csv:
+    reader = csv.reader(name_csv)
+    for row in enumerate(reader):
+        name = row[1][3].strip()
+        if name not in name_list and name not in exclude_names:
+            name_list += [name]
+            ### For testing ###
+            if len(name_list) > 15:
+                break
+            print "\nQuerying ISNI for '{0}'...".format(name)
+            isni_response = query_isni(name)
+            uri_result_set = parse_isni(isni_response)
+            if len(uri_result_set) == 0:
+                print '-> Zero records found'
+                non_matches += [[name, row[1][27], row[1][22], row[1][147]]]
+            elif len(uri_result_set) > 0:
+                uri_list = []
+                print "-> {0} records found".format(len(uri_result_set))
+                for idx, uri in enumerate(uri_result_set):
+                    # Cap the number of URIs output at 5
+                    if idx > 4:
+                        print "-> Too many records! Outputting the first 5 URIs; search for the rest manually.\n"
+                        uri_list += ["..."]
+                        break
+                    uri_list += [str(uri)]
+                    # get_record_info(uri)
+                matches += [[name, len(uri_result_set), uri_list]]
 
 # Write non-matches to csv
-write_csv('non_matches_sample.csv', non_matches)
+write_csv("non-matches_" + input_file, non_matches)
 
 # Write matches to CSV
-write_csv('matches_sample.csv', matches)
+write_csv("matches_" + input_file, matches)
