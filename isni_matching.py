@@ -37,7 +37,7 @@ def write_csv(filename, content):
     print filename, 'has been created'
 
 # Create lists
-matches = [['Name', 'Number of Matching Records', 'ISNI Record URIs']]
+matches = [['Name', 'Title', 'Year of Release', 'Item number', 'Number of Matching Records (Total)', 'ISNI Record URIs (top 5 only)']]
 non_matches = [['Name', 'Original Titles', 'Year of Release', 'Item number']]
 
 # Get unique names
@@ -84,9 +84,9 @@ with open(clean_file, 'rb') as name_csv:
                         print "-> Too many records! Outputting the first 5 URIs; search for the rest manually.\n"
                         uri_list += ["..."]
                         break
-                    uri_list += [str(uri)]
+                    uri_list += [str(uri.text)]
                     # get_record_info(uri)
-                matches += [[name, len(uri_result_set), uri_list]]
+                matches += [[name, row[1][27], row[1][22], row[1][147], len(uri_result_set), (' , ').join(uri_list)]]
 
 # Write non-matches to csv
 write_csv("non-matches_" + input_file, non_matches)
