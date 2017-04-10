@@ -1,97 +1,95 @@
+#!/usr/bin/env python
+
 import requests
-import csv
-import time
+import csv, time, sys, re
 import codecs
 from bs4 import BeautifulSoup
+import urllib
 
-def getTextOrPlaceholder(tag,placeholderText):
-    if tag:
-        return tag.text
-    else:
-        return placeholderText
-    
-def parseIsniResult(response):
+def parse_isni(response):
     soup = BeautifulSoup(response.text, 'html.parser')
-    result_row = [name]
-    for uri in soup.find_all('isniuri'):
-        isni_text = requests.get(uri.text + '.xml').text
-        isni_text_soup = BeautifulSoup(isni_text, 'html.parser')
-        time.sleep(1)
-        forename = getTextOrPlaceholder(isni_text_soup.forename, 'no forename')
-        surname = getTextOrPlaceholder(isni_text_soup.surname, 'no surname')
-        result_row += [surname + ', ' + forename, uri.text ]
-    return result_row
+    uri_result_set = soup.find_all('isniuri')
+    return uri_result_set
 
-	
+def query_isni(name):
+    root = "http://isni.oclc.nl/sru/DB=1.2/"
+    params = {
+          'query':'pica.nw={0}'.format(name),
+          'operation':'searchRetrieve',
+          'recordSchema':'isni-b',
+          'maximumRecords':1000
+          }
+    encoded = urllib.urlencode(params)
+    search_url = root + '?' + encoded
+    return requests.get(search_url)
+
+def get_record_info(uri):
+    isni_xml = requests.get(uri.text + '.xml').text
+    isni_xml_soup = BeautifulSoup(isni_xml, 'html.parser')
+    print "forename: " + isni_xml_soup.forename.text
+    print "surname: " + isni_xml_soup.surname.text
+
+def write_csv(filename, content):
+    with open(filename, 'wb') as output:
+        output.write(codecs.BOM_UTF8)
+        writer = csv.writer(output, quoting=csv.QUOTE_ALL,quotechar='"')
+        writer.writerows(content)
+    print filename, 'has been created'
+
+# Create lists
+matches = [['Name', 'Number of Matching Records', 'ISNI Record URIs']]
+non_matches = [['Name', 'Original Titles', 'Year of Release', 'Item number']]
+
 # Get unique names
-	
+exclude_names = ["Director", "[uncredited]", "[unknown]"]
 name_list = []
-file = 'sample.csv'
-with open(file, 'rb') as name_csv:
-        reader = csv.reader(name_csv)
-        for row in enumerate(reader):
-            # print row[1][3]
-            name = row[1][3]
-            #print row[1][19]
-            if name not in name_list:
-                name_list += [name]
-                
 
-# Query ISNI API				
-				
-result_table = []
-no_matches = []
-matches = []
+# Input filename
+if len(sys.argv) > 1:
+    input_file = sys.argv[1]
+else:
+    print "Please provide a CSV file.\n"
 
-for name in name_list:
-    print name
-    url = 'http://isni.oclc.nl/sru/?query=pica.nw+%3D+"' + name + '"&operation=searchRetrieve&recordSchema=isni-b'
-    response = requests.get(url)
-    time.sleep(1)
-    if '<srw:numberOfRecords>0</srw:numberOfRecords>' in response.text:
-        print 'zero results'
-        result_table += [[name, 'no matches']]
-        no_matches += [name]
-    else: 
-        print 'parsing response'
-        result_table += [parseIsniResult(response)]
-        matches += [parseIsniResult(response)]
+# Clean up any null bytes in csv
+fi = open(input_file, 'rb')
+data = fi.read()
+fi.close()
+clean_file = 'clean_' + input_file
+fo = open(clean_file, 'wb')
+fo.write(data.replace('\x00', ''))
+fo.close()
 
+# Read the file
+with open(clean_file, 'rb') as name_csv:
+    reader = csv.reader(name_csv)
+    for row in enumerate(reader):
+        name = row[1][3].strip()
+        if name not in name_list and name not in exclude_names:
+            name_list += [name]
+            ### For testing ###
+            # if len(name_list) > 15:
+            #     break
+            print "\nQuerying ISNI for '{0}'...".format(name)
+            isni_response = query_isni(name)
+            uri_result_set = parse_isni(isni_response)
+            if len(uri_result_set) == 0:
+                print '-> Zero records found'
+                non_matches += [[name, row[1][27], row[1][22], row[1][147]]]
+            elif len(uri_result_set) > 0:
+                uri_list = []
+                print "-> {0} records found".format(len(uri_result_set))
+                for idx, uri in enumerate(uri_result_set):
+                    # Cap the number of URIs output at 5
+                    if idx > 4:
+                        print "-> Too many records! Outputting the first 5 URIs; search for the rest manually.\n"
+                        uri_list += ["..."]
+                        break
+                    uri_list += [str(uri)]
+                    # get_record_info(uri)
+                matches += [[name, len(uri_result_set), uri_list]]
 
-# Write unmatched names to CSV		
-		
-no_matches_titles = [['Name', 'Titles']]
-file = 'sample.csv'
+# Write non-matches to csv
+write_csv("non-matches_" + input_file, non_matches)
 
-for name in no_matches:
-    #record_list = []
-    title_list = []
-    with open(file, 'rb') as name_csv:
-        reader = csv.reader(name_csv)
-        for row in enumerate(reader):
-            #print row[0]
-            #print row[1][3]
-            reader_name = row[1][3]    
-            if name.lower() in reader_name.lower():
-                #record_list += [row[1][147]]
-                title_list += [row[1][27] + ' (' + row[1][22] + ', item no.' + row[1][147] + ')']
-    #if len(record_list) > 0:
-    #    print name 
-    #    print record_list
-    #    print title_list
-    title_list.insert(0, name)
-    no_matches_titles += [title_list]
-
-print no_matches_titles
-
-csv_file = 'no_matches_sample.csv'
-csv_data = no_matches_titles
-
-with open(csv_file, 'wb') as output:
-    output.write(codecs.BOM_UTF8)
-    writer = csv.writer(output, quoting=csv.QUOTE_ALL,quotechar='"')
-    writer.writerows(csv_data)
-print csv_file, 'has been created'
-
-
-# TO DO: write matches to separate CSV
+# Write matches to CSV
+write_csv("matches_" + input_file, matches)
