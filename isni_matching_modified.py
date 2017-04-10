@@ -50,16 +50,25 @@ if len(sys.argv) > 1:
 else:
     print "Please provide a CSV file.\n"
 
+# Clean up any null bytes in csv
+fi = open(input_file, 'rb')
+data = fi.read()
+fi.close()
+clean_file = 'clean_' + input_file
+fo = open(clean_file, 'wb')
+fo.write(data.replace('\x00', ''))
+fo.close()
+
 # Read the file
-with open(input_file, 'rb') as name_csv:
+with open(clean_file, 'rb') as name_csv:
     reader = csv.reader(name_csv)
     for row in enumerate(reader):
         name = row[1][3].strip()
         if name not in name_list and name not in exclude_names:
             name_list += [name]
             ### For testing ###
-            if len(name_list) > 15:
-                break
+            # if len(name_list) > 15:
+            #     break
             print "\nQuerying ISNI for '{0}'...".format(name)
             isni_response = query_isni(name)
             uri_result_set = parse_isni(isni_response)
