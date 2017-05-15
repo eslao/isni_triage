@@ -34,4 +34,4 @@ for rdf_url in rdf_urls:
     for s, p, o in g1:
         g2.add( (URIRef(rdf_url), p, o) )
         
-print( g2.serialize(format='n3') )
+print( g2.serialize(format='ttl') )
