@@ -7,20 +7,20 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.isni.org/isni/0000000021464518> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000021464518> a isni:PersonPublicIdentity ;
     isni:identifierValid "0000000021464518" ;
     dcterms:source "http://id.loc.gov/authorities/names/n50048193",
         "http://viaf.org/viaf/52932189" ;
     skos:prefLabel "Lehman, Robin" .
 
-<http://www.isni.org/isni/0000000021578769> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000021578769> a isni:PersonPublicIdentity ;
     isni:identifierValid "0000000021578769" ;
     dcterms:source "http://id.loc.gov/authorities/names/n78059883",
         "http://viaf.org/viaf/305588652",
         "http://viaf.org/viaf/57873613" ;
     skos:prefLabel "Gangelhoff, Bonnie" .
 
-<http://www.isni.org/isni/0000000023301202> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000023301202> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1928-08-29" ;
     isni:identifierValid "0000000023301202" ;
     dcterms:source "http://id.loc.gov/authorities/names/n83157925",
@@ -35,7 +35,7 @@
         "Ритенберга, Дзидра" ;
     skos:prefLabel "Ritenberga, Dzidra 1928-" .
 
-<http://www.isni.org/isni/0000000023926456> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000023926456> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1948-01-01" ;
     isni:identifierValid "0000000023926456" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/12942843",
@@ -52,7 +52,7 @@
         "Child, Abigail 1948-..." ;
     skos:prefLabel "Child, Abigail 1948-" .
 
-<http://www.isni.org/isni/0000000028422716> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000028422716> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1942" ;
     isni:identifierValid "0000000028422716" ;
     dcterms:source "http://id.loc.gov/authorities/names/n86025325",
@@ -65,7 +65,7 @@
         "Динара Кулдашевна Асанова" ;
     skos:prefLabel "Asanova, Dinara Kuldashevna 1942-1985" .
 
-<http://www.isni.org/isni/000000003201351X> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/000000003201351X> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1964-01-01" ;
     isni:identifierValid "000000003201351X" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/15663709",
@@ -79,7 +79,7 @@
         "Роуз Троше" ;
     skos:prefLabel "Troche, Rose 1964-..." .
 
-<http://www.isni.org/isni/000000003616389X> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/000000003616389X> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1906-05-21" ;
     isni:identifierValid "000000003616389X" ;
     dcterms:source "http://id.loc.gov/authorities/names/n2007002424",
@@ -108,14 +108,14 @@
         "سرگئی گراسیموف (کارگردان)" ;
     skos:prefLabel "Sergei Apollinarijewitsch Gerassimow" .
 
-<http://www.isni.org/isni/0000000038458747> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000038458747> a isni:PersonPublicIdentity ;
     isni:identifierValid "0000000038458747" ;
     dcterms:source "http://id.loc.gov/authorities/names/no00016398",
         "http://viaf.org/viaf/43837956",
         "http://www.idref.fr/059438118" ;
     skos:prefLabel "Rothschild, Amalie R." .
 
-<http://www.isni.org/isni/0000000045254603> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000045254603> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1962-02-24" ;
     isni:identifierValid "0000000045254603" ;
     dcterms:source "http://d-nb.info/gnd/1089379536",
@@ -126,7 +126,7 @@
         "Livingston, Jennie" ;
     skos:prefLabel "Livingston, Jennie 1962-" .
 
-<http://www.isni.org/isni/0000000045469727> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000045469727> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1897" ;
     isni:identifierValid "0000000045469727" ;
     dcterms:source "http://d-nb.info/gnd/1054052522",
@@ -142,20 +142,20 @@
         "Madeline Brandeis" ;
     skos:prefLabel "Frank, Madeline (Frueherer Name) 1897-1937" .
 
-<http://www.isni.org/isni/0000000045499918> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000045499918> a isni:PersonPublicIdentity ;
     isni:identifierValid "0000000045499918" ;
     dcterms:source "http://id.loc.gov/authorities/names/no96065173",
         "http://viaf.org/viaf/14368707" ;
     skos:prefLabel "Rambasek, Patricia E." .
 
-<http://www.isni.org/isni/0000000049230692> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000049230692> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1955-04-29" ;
     isni:identifierValid "0000000049230692" ;
     dcterms:source "http://id.loc.gov/authorities/names/no2005119353",
         "http://viaf.org/viaf/46506819" ;
     skos:prefLabel "Ovcharov, Sergeĭ 1955-" .
 
-<http://www.isni.org/isni/0000000049776257> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000049776257> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1906-01-01" ;
     isni:identifierValid "0000000049776257" ;
     dcterms:source "http://id.loc.gov/authorities/names/nr98027611",
@@ -165,7 +165,7 @@
         "Mary Ellen Bute" ;
     skos:prefLabel "Bute, Mary Ellen 1906-1983" .
 
-<http://www.isni.org/isni/0000000054510920> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000054510920> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1970-05-09" ;
     isni:identifierValid "0000000054510920" ;
     dcterms:source "http://id.loc.gov/authorities/names/no2008061110",
@@ -176,7 +176,7 @@
         "هلن هیل" ;
     skos:prefLabel "Hill, Helen 1970-2007" .
 
-<http://www.isni.org/isni/0000000057041509> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000057041509> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1966-01-01" ;
     isni:identifierValid "0000000057041509" ;
     dcterms:source "http://d-nb.info/gnd/120200996",
@@ -189,7 +189,7 @@
         "Lauren Greenfield" ;
     skos:prefLabel "Greenfield, Lauren 1966-" .
 
-<http://www.isni.org/isni/0000000063028984> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000063028984> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1954-11-16" ;
     isni:identifierValid "0000000063028984" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1172980",
@@ -208,7 +208,7 @@
         "アリソン・アンダース" ;
     skos:prefLabel "Anders, Allison 1954-..." .
 
-<http://www.isni.org/isni/0000000063101352> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000063101352> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1900" ;
     isni:identifierValid "0000000063101352" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/14061841",
@@ -219,7 +219,7 @@
     skos:altLabel "Sun" ;
     skos:prefLabel "Sun, Shirley" .
 
-<http://www.isni.org/isni/0000000066484467> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000066484467> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1882-11-17" ;
     isni:identifierValid "0000000066484467" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/12450301",
@@ -245,7 +245,7 @@
         "ジェルメーヌ・デュラック" ;
     skos:prefLabel "Saisset-Schneider, Charlotte Elisabeth Germaine 1882-1942" .
 
-<http://www.isni.org/isni/0000000072462168> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000072462168> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1942-02-21" ;
     isni:identifierValid "0000000072462168" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1794603",
@@ -275,7 +275,7 @@
         "마가레테 폰 트로타" ;
     skos:prefLabel "Trotta, Margarethe Maria von (Wirklicher Name) 1942-" .
 
-<http://www.isni.org/isni/0000000073280710> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000073280710> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1938-06-01" ;
     isni:identifierValid "0000000073280710" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/16163703",
@@ -325,7 +325,7 @@
         "셰피트코, 라리사 1938-1979" ;
     skos:prefLabel "Šepitʹko, Larisa Edmontovna 1938-1979" .
 
-<http://www.isni.org/isni/0000000074086784> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000074086784> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1946-08-12" ;
     isni:identifierValid "0000000074086784" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/13992073",
@@ -340,7 +340,7 @@
         "Leaf, Caroline 1946-" ;
     skos:prefLabel "Leaf, Caroline 1946-..." .
 
-<http://www.isni.org/isni/0000000076896385> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000076896385> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1917-05-01" ;
     isni:identifierValid "0000000076896385" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1621337",
@@ -353,7 +353,7 @@
         "Венди Туа" ;
     skos:prefLabel "Jessie, Beryl May 1917-2010" .
 
-<http://www.isni.org/isni/0000000078234895> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000078234895> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1946-08-17" ;
     isni:identifierValid "0000000078234895" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1292640",
@@ -376,7 +376,7 @@
         "쿨리지, 마샤 1946-" ;
     skos:prefLabel "Coolidge, Martha 1946-..." .
 
-<http://www.isni.org/isni/000000007825153X> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/000000007825153X> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1935-05-24" ;
     isni:identifierValid "000000007825153X" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1596885",
@@ -395,7 +395,7 @@
         "Джоан Миклин Сильвер" ;
     skos:prefLabel "Silver, Joan Micklin 1935-..." .
 
-<http://www.isni.org/isni/0000000078456295> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000078456295> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1934-11-05" ;
     isni:identifierValid "0000000078456295" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/15048369",
@@ -430,7 +430,7 @@
         "Муратова, Кира Георгиевна 1934-" ;
     skos:prefLabel "Korotkova, Kira Georgiyevna 1934-" .
 
-<http://www.isni.org/isni/0000000081294688> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000081294688> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1954-09-19" ;
     isni:identifierValid "0000000081294688" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/14127557",
@@ -449,7 +449,7 @@
         "パールマン, ジャネット" ;
     skos:prefLabel "Perlman, Janet Laurie 1954-" .
 
-<http://www.isni.org/isni/0000000083856533> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000083856533> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1934-11-24" ;
     isni:identifierValid "0000000083856533" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/13534050",
@@ -467,7 +467,7 @@
         "Райнер, Ивонна" ;
     skos:prefLabel "Rainer, Yvonne 1934-" .
 
-<http://www.isni.org/isni/0000000083969458> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000083969458> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1950-12-18" ;
     isni:identifierValid "0000000083969458" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1176522",
@@ -493,7 +493,7 @@
         "암스트롱, 질리언 1950-" ;
     skos:prefLabel "Armstrongová, Gillian 1950-" .
 
-<http://www.isni.org/isni/0000000084056415> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000084056415> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1940" ;
     isni:identifierValid "0000000084056415" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/12108658",
@@ -515,7 +515,7 @@
         "ヴェクスラー, ジュディス" ;
     skos:prefLabel "Wechsler, Judith Glatzer" .
 
-<http://www.isni.org/isni/0000000109383333> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000109383333> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1962-11-19" ;
     isni:identifierValid "0000000109383333" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1061891",
@@ -563,7 +563,7 @@
         "포스터, 조디 1962-" ;
     skos:prefLabel "Foster, Alicia Christian (Wirklicher Name) 1962-" .
 
-<http://www.isni.org/isni/0000000109390015> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000109390015> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1957-10-15" ;
     isni:identifierValid "0000000109390015" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1290125",
@@ -598,7 +598,7 @@
         "미라 네어" ;
     skos:prefLabel "Nair, Mira 1957-..." .
 
-<http://www.isni.org/isni/0000000109569146> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000109569146> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1946-11-03" ;
     isni:identifierValid "0000000109569146" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/14497297",
@@ -611,7 +611,7 @@
         "Weinstein, Miriam 1946-" ;
     skos:prefLabel "Weinstein, Miriam 1946-..." .
 
-<http://www.isni.org/isni/0000000114540911> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000114540911> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1945-12-02" ;
     isni:identifierValid "0000000114540911" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1297359",
@@ -629,7 +629,7 @@
         "پنلوپه اسفیریس" ;
     skos:prefLabel "Spheeris, Penelope 1945-..." .
 
-<http://www.isni.org/isni/0000000114968926> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000114968926> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1958-02-03" ;
     isni:identifierValid "0000000114968926" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX4952203",
@@ -648,7 +648,7 @@
         "Борден, Лиззи" ;
     skos:prefLabel "Borden, Linda Elizabeth" .
 
-<http://www.isni.org/isni/0000000116052938> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000116052938> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1898-07-25" ;
     isni:identifierValid "0000000116052938" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/14117029",
@@ -663,7 +663,7 @@
         "Lubin, Arthur 1901-1995" ;
     skos:prefLabel "Lubin, Arthur 1898-1995" .
 
-<http://www.isni.org/isni/0000000116079305> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000116079305> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1947-05-23" ;
     isni:identifierValid "0000000116079305" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/14025508",
@@ -702,7 +702,7 @@
         "허안화 1947-" ;
     skos:prefLabel "Hui, Ann On-wah 1947-" .
 
-<http://www.isni.org/isni/0000000116422652> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000116422652> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1914-10-06" ;
     isni:identifierValid "0000000116422652" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/14655118",
@@ -718,7 +718,7 @@
         "Littlewood, Joan 1915?-2002" ;
     skos:prefLabel "Littlewood, Joan Maud 1914-2002" .
 
-<http://www.isni.org/isni/0000000116455999> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000116455999> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1919-10-02" ;
     isni:identifierValid "0000000116455999" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/14592744",
@@ -739,7 +739,7 @@
         "شرلی کلارک" ;
     skos:prefLabel "Brimberg Clarke, Shirley" .
 
-<http://www.isni.org/isni/0000000117586923> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000117586923> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1900-01-03" ;
     isni:identifierValid "0000000117586923" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/14653149",
@@ -756,7 +756,7 @@
         "دوروتی آرزنر" ;
     skos:prefLabel "Arzner, Dorothy 1897-1979" .
 
-<http://www.isni.org/isni/0000000117647992> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000117647992> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1953-01-12" ;
     isni:identifierValid "0000000117647992" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1288357",
@@ -778,7 +778,7 @@
         "헤론, 매리 1953-" ;
     skos:prefLabel "Harron, Mary 1953-..." .
 
-<http://www.isni.org/isni/0000000118624055> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000118624055> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1898-09-20" ;
     isni:identifierValid "0000000118624055" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1067526",
@@ -807,7 +807,7 @@
         "맥레오드, 노만 Z. 1898-1964" ;
     skos:prefLabel "MacLeod, Norman Zenos 1898-1964" .
 
-<http://www.isni.org/isni/0000000119344899> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000119344899> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1964-01-01" ;
     isni:identifierValid "0000000119344899" ;
     dcterms:source "http://id.loc.gov/authorities/names/no2008152143",
@@ -817,7 +817,7 @@
         "Манон Брайан" ;
     skos:prefLabel "Briand, Manon" .
 
-<http://www.isni.org/isni/0000000119346712> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000119346712> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1958-08-20" ;
     isni:identifierValid "0000000119346712" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1260398",
@@ -835,7 +835,7 @@
         "로제마, 패트리샤 1958-" ;
     skos:prefLabel "Rozema, Patricia 1958-..." .
 
-<http://www.isni.org/isni/0000000120174161> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000120174161> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1899-06-02" ;
     isni:identifierValid "0000000120174161" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX1165615",
@@ -872,7 +872,7 @@
         "라이니거, 로테 1899-1981" ;
     skos:prefLabel "Reiniger, Charlotte (Wirklicher Name) 1899-1981" .
 
-<http://www.isni.org/isni/0000000121485922> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000121485922> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1933-01-14" ;
     isni:identifierValid "0000000121485922" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/14011013",
@@ -900,7 +900,7 @@
         "斯坦·布拉哈格" ;
     skos:prefLabel "Brakhage, James Stanley 1933-2003" .
 
-<http://www.isni.org/isni/0000000123215950> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000123215950> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1954-04-30" ;
     isni:identifierValid "0000000123215950" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/13999121",
@@ -932,7 +932,7 @@
         "제인 캠피언" ;
     skos:prefLabel "Campion, Jane 1954-" .
 
-<http://www.isni.org/isni/0000000123262888> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000123262888> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1923-05-27" ;
     isni:identifierValid "0000000123262888" ;
     dcterms:source "http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX4433502",
@@ -950,7 +950,7 @@
         "Stéphane, Nicole de 1923-2007" ;
     skos:prefLabel "Rothschild, Nicole de 1923-2007" .
 
-<http://www.isni.org/isni/0000000365468723> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000365468723> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1938" ;
     isni:identifierValid "0000000365468723" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/14087510",
@@ -965,7 +965,7 @@
         "Joyce Chopra" ;
     skos:prefLabel "Chopra, Joyce 1938-..." .
 
-<http://www.isni.org/isni/0000000381898264> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000381898264> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1958" ;
     isni:identifierValid "0000000381898264" ;
     dcterms:source "http://d-nb.info/gnd/139043837",
@@ -974,7 +974,7 @@
     skos:altLabel "Katz, Joel" ;
     skos:prefLabel "Katz, Joel 1958-" .
 
-<http://www.isni.org/isni/0000000382837316> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000382837316> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1971" ;
     isni:identifierValid "0000000382837316" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/16525728",
@@ -984,7 +984,7 @@
     skos:altLabel "Colburn, Martha 1971-" ;
     skos:prefLabel "Colburn, Martha 1971-..." .
 
-<http://www.isni.org/isni/0000000432700917> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000432700917> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1961-08-10" ;
     isni:identifierValid "0000000432700917" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/14064512",
@@ -997,7 +997,7 @@
         "Sachs, Lynne 1961-" ;
     skos:prefLabel "Sachs, Lynne 1961-..." .
 
-<http://www.isni.org/isni/0000000434907399> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000434907399> a isni:PersonPublicIdentity ;
     rdaGr2:dateOfBirth "1950" ;
     isni:identifierValid "0000000434907399" ;
     dcterms:source "http://catalogue.bnf.fr/ark:/12148/16000550",
@@ -1009,18 +1009,18 @@
     skos:altLabel "Field, Connie" ;
     skos:prefLabel "Field, Connie 19..-..." .
 
-<http://www.isni.org/isni/0000000460191590> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000460191590> a isni:PersonPublicIdentity ;
     isni:identifierValid "0000000460191590" ;
     skos:prefLabel "Sears, Sara" .
 
-<http://www.isni.org/isni/0000000460202210> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000460202210> a isni:PersonPublicIdentity ;
     isni:identifierValid "0000000460202210" ;
     skos:prefLabel "Anthony, Florence" .
 
-<http://www.isni.org/isni/0000000460205390> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000460205390> a isni:PersonPublicIdentity ;
     isni:identifierValid "0000000460205390" ;
     skos:prefLabel "Cummings, Joan" .
 
-<http://www.isni.org/isni/0000000460205403> a isni:PersonPublicIdentity ;
+<http://isni.org/isni/0000000460205403> a isni:PersonPublicIdentity ;
     isni:identifierValid "0000000460205403" ;
     skos:prefLabel "Benjamin, Mary" .
